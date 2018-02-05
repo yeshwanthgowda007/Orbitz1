@@ -29,7 +29,7 @@
 					<suiteXmlFile>testng.xml</suiteXmlFile>
 				</suiteXmlFiles>
 				 <listeners>
-        <listener class-name="drkthng.comparex.TestListener" />
+        <listener class-name="Utility.TestListener" />
   </listeners>
 			</configuration>
 	</plugin>
@@ -43,6 +43,13 @@
   		<version>3.7.1</version>
   	</dependency>
   	
+  	<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+  	  	
   	<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 	<dependency>
 	    <groupId>org.apache.poi</groupId>
@@ -75,7 +82,6 @@
 	  <groupId>org.testng</groupId>
 	  <artifactId>testng</artifactId>
 	  <version>6.8</version>
-	  <scope>test</scope>
   </dependency>
   
   	<dependency>
@@ -93,6 +99,13 @@
     <scope>provided</scope>
 </dependency>
 
-    
+<!-- https://mvnrepository.com/artifact/com.relevantcodes/extentreports -->
+<dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.41.2</version>
+</dependency>
+
+  
   </dependencies>
 </project>

@@ -2,6 +2,7 @@ package resources;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -18,7 +19,7 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 
 public class BaseClassTest implements Constants {
-//	public static Logger log=Logger.getLogger("BaseClassTest");
+	public static Logger log=Logger.getLogger("BaseClassTest");
 	public static ExtentReports report;
 	@BeforeSuite
 	public void createReport()
@@ -36,7 +37,7 @@ public class BaseClassTest implements Constants {
 	
 	static
 	{
-//		log.info("Setting the properties of the browsers");
+		log.info("Setting the properties of the browsers");
 		System.setProperty(CHROME_KEY, CHROME_VALUE);
 		System.setProperty(GECKO_KEY, GECKO_VALUE);
 	}
@@ -46,7 +47,7 @@ public class BaseClassTest implements Constants {
 	@BeforeMethod
 	public void openBrowser(String browser)
 	{
-//		log.info("Opening the browser");
+		log.info("Opening the browser");
 		if(browser.equalsIgnoreCase("chrome"))
 		{
 			driver=new ChromeDriver();
@@ -64,7 +65,7 @@ public class BaseClassTest implements Constants {
 	
 	@AfterMethod
 	public void closeApplication(ITestResult result) {
-//		log.info("Closing the browser");
+		log.info("Closing the browser");
 		driver.quit();
 		String testName = result.getName();
 		ExtentTest test = report.createTest(testName);
